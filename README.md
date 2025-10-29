@@ -19,7 +19,7 @@ Optimized for:
 ### 1️⃣ System dependencies
 ```bash
 sudo apt update
-sudo apt install -y python3 python3-pip portaudio19-dev ffmpeg git
+sudo apt install -y python3 python3-pip python3-venv ffmpeg portaudio19-dev alsa-utils libasound2-plugins git
 ```
 
 ### 2️⃣ Clone repository
