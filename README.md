@@ -57,7 +57,7 @@ Manual download:
 Example (German language):
 
 ```bash
-python3 voice_trigger.py --lang de
+python3 voice_trigger.py --model base --compute int8 --lang de --cpu_threads 2
 ```
 
 Default settings:
