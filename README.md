@@ -98,8 +98,8 @@ TRIGGERS = {
 
 | Platform | Model | Compute | Latency |
 |-----------|--------|----------|----------|
-| Linux Mint (i5) | tiny.en | int8 | ~0.5–0.6s |
-| Raspberry Pi 4 / RK3566 | tiny | int8 | ~3–6s |
+| Linux Mint (i5) | base | int8 | ~0.5–0.6s |
+| Raspberry Pi 4 / RK3566 | base | int8 | ~3–6s |
 
 Use `int8` for fastest inference on CPU.
 
