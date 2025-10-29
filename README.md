@@ -28,7 +28,7 @@ git clone https://github.com/proditserbia/voice-hotword.git
 cd voice-hotword
 ```
 
-If you only use `voice_trigger_v1.py`, copy it to your preferred folder (e.g. `/home/pi/voice/`).
+If you only use `voice_trigger.py`, copy it to your preferred folder (e.g. `/home/pi/voice/`).
 
 ### 3️⃣ Python dependencies
 ```bash
@@ -40,7 +40,7 @@ pip3 install sounddevice webrtcvad numpy rapidfuzz faster-whisper
 
 ## 🧠 Model setup
 
-Download a small **faster-whisper** model (`tiny.en` or `tiny`):
+Download a small **faster-whisper** model (`base.en` or `base`):
 
 ```bash
 mkdir -p ~/.cache/whisper
@@ -48,7 +48,7 @@ mkdir -p ~/.cache/whisper
 
 The first run will automatically download the model.  
 Manual download:  
-👉 [https://huggingface.co/guillaumekln/faster-whisper-tiny.en](https://huggingface.co/guillaumekln/faster-whisper-tiny.en)
+👉 [https://huggingface.co/guillaumekln/faster-whisper-base](https://huggingface.co/guillaumekln/faster-whisper-base)
 
 ---
 
@@ -57,7 +57,7 @@ Manual download:
 Example (German language):
 
 ```bash
-python3 voice_trigger_v1.py --lang de
+python3 voice_trigger.py --lang de
 ```
 
 Default settings:
@@ -78,7 +78,7 @@ Console output:
 
 ## ⚙️ Configuration
 
-Edit the top of `voice_trigger_v1.py`:
+Edit the top of `voice_trigger.py`:
 
 ```python
 TRIGGERS = {
@@ -113,7 +113,7 @@ crontab -e
 
 Add:
 ```
-@reboot /usr/bin/python3 /home/pi/voice/voice_trigger_v1.py --lang de >> /home/pi/voice/log.txt 2>&1
+@reboot /usr/bin/python3 /home/pi/voice/voice_trigger.py --lang de >> /home/pi/voice/log.txt 2>&1
 ```
 
 ---
